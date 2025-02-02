@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Anlık Çeviri",
+  "version": "1.0",
+  "description": "Twitch yayınları için anlık konuşma tanıma ve çeviri sistemi",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.twitch.tv/*",
+    "https://translate.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["*://*.twitch.tv/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+} 

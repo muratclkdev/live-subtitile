@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#stop {
+    background-color: #f44336;
+    color: white;
+}
+
+#status {
+    font-size: 14px;
+    margin-top: 10px;
+}
