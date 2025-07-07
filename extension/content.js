@@ -1,5 +1,11 @@
 // content.js
 
+if (window.twitchTranslateLoaded) {
+    console.log('Content script already loaded');
+    return;
+}
+window.twitchTranslateLoaded = true;
+
 (() => {
     class SpeechHandler {
         constructor(elements) {
